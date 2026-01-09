@@ -1,0 +1,7 @@
+dist
+data
+node_modules
+dev/imgResized
+dev/img/icons/
+dev/test.html
+package-lock.json

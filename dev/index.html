@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+	<meta charset="UTF-8">
+	<script type="application/ld+json">
+			{
+				"@context":"https://schema.org",
+				"@type":"WebSite",
+				"url":"https://{{name}}",
+				"name":"{{fullName}} - {{title}}",
+				"description":"{{description}}",
+				"publisher": {
+					"@type":"Organization",
+					"name":"{{author}}",
+					"url":"https://{{name}}",
+					"logo": {
+						"@type":"ImageObject",
+						"url":"https://{{name}}/img/icons/icon-512x512.png",
+						"width": 512,
+						"height": 512
+					},
+					"contactPoint": {
+						"@type":"ContactPoint",
+						"contactType":"Customer Support",
+						"email":"{{email}}",
+						"telephone":"{{fullPhone}}",
+						"areaServed":"CZ"
+					}
+				}
+			}
+		</script>
+
+	<title>{{title}}</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="{{author}}">
+	<meta name="robots" content="index, follow">
+
+	<meta name="title" property="og:title" content="{{fullName}} - {{title}}">
+	<meta name="description" property="og:description" content="{{description}}">
+	<meta name="keywords" property="og:keywords" content="{{keywords}}">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="{{name}}">
+	<meta property="og:locale" content="cs_CS">
+	<meta property="og:url" content="https://{{name}}/index.html">
+	<meta property="og:image" content="https://{{name}}/img/logoSocial.webp">
+	<meta property="og:image:alt" content="{{altPortret}}">
+
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="{{fullName}} - {{title}}">
+	<meta name="twitter:description" content="{{description}}">
+	<meta name="twitter:image" content="https://{{name}}/img/twitter.webp">
+
+	<link rel="stylesheet" href="w3.css">
+	<link rel="stylesheet" href="styles.css">
+	<script src="scripts.js"></script>
+	<!--{{style}}-->
+	<!--{{script}}-->
+	<link rel="apple-touch-icon" sizes="180x180" href="./img/icons/icon-180x180.png">
+	<link rel="icon" type="image/x-icon" sizes="48x48" href="./img/icons/favicon.ico">
+	<link rel="icon" type="image/png" sizes="32x32" href="./img/icons/icon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./img/icons/icon-16x16.png">
+	<link rel="manifest" href="./site.webmanifest">
+	<link rel="canonical" href="https://{{name}}/" />
+</head>
+
+<body>
+	<div class="w3-overlay w3-hide-large w3-animate-opacity menuCloser" title="Zavři menu" id="myOverlay"></div>
+	<div class="w3-top">
+		<div class="w3-bar w3-white" id="myNavbar">
+			<a href="#home" class="w3-bar-item logoWrapp">
+				<img class="logo" alt="logo" src="img/logoObdelnik.webp">
+			</a>
+			<div class="w3-center w3-hide-small w3-hide-medium">
+				<a href="mailto:{{email}}" class="w3-bar-item w3-large w3-button">
+					<svg class="fa">
+						<use xlink:href="sprites/fa-solid.svg#envelope"></use>
+					</svg>
+					{{email}}
+				</a>
+				<a href="tel:{{fullPhone}}" class="w3-bar-item w3-large w3-button">
+					<svg class="fa">
+						<use xlink:href="sprites/fa-solid.svg#phone"></use>
+					</svg>
+					{{phone}}
+				</a>
+			</div>
+			<div class="w3-right w3-hide-small w3-hide-medium">
+				<a href="#about" class="w3-bar-item w3-large w3-button">
+					<svg class="fa">
+						<use xlink:href="sprites/fa-solid.svg#user"></use>
+					</svg>
+					O MNĚ
+				</a>
+				<a href="#why" class="w3-bar-item w3-large w3-button">
+					<svg class="fa">
+						<use xlink:href="sprites/fa-solid.svg#hand-peace"></use>
+					</svg>
+					POVEDLO SE
+				</a>
+				<a href="#contact" class="w3-bar-item w3-large w3-button">
+					<svg class="fa">
+						<use xlink:href="sprites/fa-solid.svg#address-card"></use>
+					</svg>
+					KONTAKT
+				</a>
+			</div>
+			<span class="menuOpener w3-bar-item w3-button w3-right w3-hide-large">
+				<svg class="fa">
+					<use xlink:href="sprites/fa-solid.svg#bars"></use>
+				</svg>
+			</span>
+		</div>
+	</div>
+	<nav class="menuCloser w3-sidebar w3-bar-block color-1 w3-card w3-animate-left w3-hide-large w3-large" id="mySidebar">
+		<span class="w3-bar-item w3-button w3-xlarge w3-padding-16">
+			<svg class="fa w3-right">
+				<use xlink:href="sprites/fa-solid.svg#close"></use>
+			</svg>
+		</span>
+		<a href="#about" class="w3-bar-item w3-button w3-right-align">O MNĚ</a>
+		<a href="#why" class="w3-bar-item w3-button w3-right-align">POVEDLO SE</a>
+		<a href="#contact" class="w3-bar-item w3-button w3-right-align">KONTAKT</a>
+	</nav>
+	<header class="w3-display-container" id="home">
+		<div class="bigTitle w3-display-left w3-text-white">
+			<h1>{{h1}}</h1>
+			<h2>{{fullName}}</h2>
+		</div>
+		<a href="#contact" class="w3-button w3-white w3-padding-large w3-margin-right w3-hide-small w3-display-right w3-hide-medium">Zeptejte se</a>
+		<div class="contactIcons">
+			<a href="mailto:{{email}}" rel="nofollow" class="w3-hover-opacity">
+				<svg class="fa">
+					<use xlink:href="sprites/fa-solid.svg#envelope"></use>
+				</svg>
+			</a>
+
+			<a href="tel:{{fullPhone}}" rel="nofollow" class="w3-hover-opacity">
+				<svg class="fa">
+					<use xlink:href="sprites/fa-solid.svg#phone"></use>
+				</svg>
+			</a>
+
+			<a href="{{facebook}}" target="_blank" rel="nofollow" class="w3-hover-opacity">
+				<svg class="fa">
+					<use xlink:href="sprites/fa-brands.svg#facebook-square"></use>
+				</svg>
+			</a>
+
+			<a href="{{twitter}}" target="_blank" rel="nofollow" class="w3-hover-opacity">
+				<svg class="fa">
+					<use xlink:href="sprites/fa-brands.svg#x-twitter"></use>
+				</svg>
+			</a>
+			<a href="{{instagram}}" target="_blank" rel="nofollow" class="w3-hover-opacity">
+				<svg class="fa">
+					<use xlink:href="sprites/fa-brands.svg#instagram"></use>
+				</svg>
+			</a>
+			<a href="{{linkedin}}" target="_blank" rel="nofollow" class="w3-hover-opacity">
+				<svg class="fa">
+					<use xlink:href="sprites/fa-brands.svg#linkedin"></use>
+				</svg>
+			</a>
+		</div>
+	</header>
+	<section class="w3-container" id="about">
+		<h3 class="w3-center">
+			<svg class="fa">
+				<use xlink:href="sprites/fa-solid.svg#user"></use>
+			</svg>
+
+			O MNĚ
+		</h3>
+		<p class="w3-center w3-xlarge">Motto: Politika je o nás všech, má být službou lidem.</p>
+
+		<div class="w3-section w3-center">
+			<div class="video-container">
+				<iframe src="https://www.youtube.com/embed/fC_n4cMqJLE?si=gH-jxNucSGJGBna4" class="video" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen></iframe>
+			</div>
+		</div>
+
+		<div class="w3-section">
+			<div class="header">
+				<svg class="fa">
+					<use xlink:href="sprites/fa-solid.svg#home"></use>
+				</svg>
+				Plzeňský rodák
+			</div>
+			<div class="text">
+				Jsem rodilý Plzeňák a Plzeň jsem neopustil ani během studií. I když mám rád šumavskou přírodu nebo rakouská jezera, vždy mě to táhne zpátky domů – do města, kde žiju, pracuju a které mám opravdu rád.
+			</div>
+		</div>
+
+		<div class="w3-section">
+			<div class="header">
+				<svg class="fa">
+					<use xlink:href="sprites/fa-solid.svg#person-chalkboard"></use>
+				</svg>
+				Vzdělání
+			</div>
+			<div class="text">
+				V místě, kde dnes bydlím, jsem nejprve studoval základní školu a později střední průmyslovou školu. Vždy mě bavilo něco tvořit a budovat, proto mě přirozeně přitahovalo stavitelství a architektura. Na Fakultě aplikovaných věd ZČU jsem následně vystudoval bakalářský i magisterský obor Stavitelství. Sám sebe vnímám spíš jako logického a analytického člověka, zároveň se ale domluvím anglicky a během studií jsem se věnoval i němčině a ruštině.
+			</div>
+		</div>
+
+		<div class="w3-row gallery w3-center">
+			<div class="w3-third">
+				<div class="w3-card">
+					<picture>
+						<source srcset="imgResized/deti-480.webp" media="(max-width: 768px)">
+						<source srcset="imgResized/deti-768.webp" media="(max-width: 1200px)">
+						<source srcset="imgResized/deti-1200.webp" media="(max-width: 1600px)">
+						<source srcset="imgResized/deti-2000.webp" media="(max-width: 2500px)">
+						<img src="img/deti.webp" class="w3-image" alt="Mgr. Tomáš Morávek - s malými sportovci">
+					</picture>
+
+					<div class="w3-container">
+						<span>S malými sportovci"</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="w3-third">
+				<div class="w3-card">
+					<picture>
+						<source srcset="imgResized/kancelar-480.webp" media="(max-width: 768px)">
+						<source srcset="imgResized/kancelar-768.webp" media="(max-width: 1200px)">
+						<source srcset="imgResized/kancelar-1200.webp" media="(max-width: 1600px)">
+						<source srcset="imgResized/kancelar-2000.webp" media="(max-width: 2500px)">
+						<img src="img/kancelar.webp" class="w3-image" alt="Mgr. Tomáš Morávek - v kanceláři">
+					</picture>
+					<div class="w3-container">
+						<span>Kancelář není nutné zlo</span>
+					</div>
+				</div>
+			</div>
+			<div class="w3-third">
+				<div class="w3-card">
+					<picture>
+						<source srcset="imgResized/zaLidma-480.webp" media="(max-width: 768px)">
+						<source srcset="imgResized/zaLidma-768.webp" media="(max-width: 1200px)">
+						<source srcset="imgResized/zaLidma-1200.webp" media="(max-width: 1600px)">
+						<img src="img/zaLidma.webp" class="w3-image" alt="Mgr. Tomáš Morávek - mám rád lidi">
+					</picture>
+					<div class="w3-container">
+						<span>Mám rád lidi</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="w3-section">
+			<div class="header">
+				<span class="fa fa-futbol-o"></span>
+				<svg class="fa">
+					<use xlink:href="sprites/fa-solid.svg#futbol"></use>
+				</svg>
+				Sport
+			</div>
+			<div class="text">
+				Mou celoživotní vášní je sport. Od dětství jsem si vyzkoušel řadu sportů – volejbal, atletiku nebo biatlon – ale jeden mi zůstal po celý život: fotbal. Po skončení aktivní kariéry jsem se velmi brzy začal věnovat trénování mládeže. Nejen proto, abych přivedl co nejvíce dětí ke sportu, ale hlavně proto, abych jim ukázal, že sport může být radost, přátelství a koníček na celý život. Mým cílem vždy bylo vychovávat nejen sportovce, ale především slušné a odolné osobnosti, které se nebojí výzev a umí přijmout i prohru.
+			</div>
+		</div>
+
+		<div class="w3-section">
+			<div class="header">
+				<svg class="fa">
+					<use xlink:href="sprites/fa-solid.svg#baby"></use>
+				</svg>
+				Práce s mládeží
+			</div>
+			<div class="text">
+				Dnes je to už více než 16 let, co trénuji na různých úrovních – od amatérského až po poloprofesionální sport. Začínal jsem v klubu TJ Košutka Plzeň, později jsem působil i u mládežnických týmů FC Viktoria Plzeň a také jako scout mládeže. Srdcem jsem ale vždy zůstal v domovském klubu, kde dodnes trénuji a působím jako šéftrenér.
+			</div>
+		</div>
+
+		<div class="w3-section">
+			<div class="header">
+				<svg class="fa">
+					<use xlink:href="sprites/fa-solid.svg#face-smile"></use>
+				</svg>
+				Kariéra
+			</div>
+			<div class="text">
+				V pracovním životě jsem měl štěstí na lidi kolem sebe – a právě ti mě formovali do podoby, v jaké jsem dnes. Během studií i po nich jsem pracoval v projekčních a realizačních stavebních firmách, později jsem si vyzkoušel i druhou stranu – práci na stavebním úřadě ve Všerubech nebo na odboru investic Plzeňského kraje. Všechny tyto zkušenosti mi pomohly propojit odborné znalosti s praxí a každodenním životem. Od roku 2022 působím jako radní města Plzně s gescí podpory sportu, mládeže a tělovýchovy.
+			</div>
+		</div>
+
+		<div class="w3-row gallery w3-center">
+			<div class="w3-third">
+				<div class="w3-card">
+					<picture>
+						<source srcset="imgResized/bytFit-480.webp" media="(max-width: 768px)">
+						<source srcset="imgResized/bytFit-768.webp" media="(max-width: 1200px)">
+						<source srcset="imgResized/bytFit-1200.webp" media="(max-width: 1600px)">
+						<source srcset="imgResized/bytFit-2000.webp" media="(max-width: 2500px)">
+						<img src="./img/bytFit.webp" class="w3-image" alt="Mgr. Tomáš Morávek - Je pro mě důležité být fit. Ve zdravém těle zdravý duch.">
+					</picture>
+					<div class="w3-container">
+						<span>Je pro mě důležité být fit. Ve zdravém těle zdravý duch.</span>
+					</div>
+				</div>
+			</div>
+			<div class="w3-third">
+				<div class="w3-card">
+					<picture>
+						<source srcset="imgResized/cestovani-480.webp" media="(max-width: 768px)">
+						<source srcset="imgResized/cestovani-768.webp" media="(max-width: 1200px)">
+						<source srcset="imgResized/cestovani-1200.webp" media="(max-width: 1600px)">
+						<source srcset="imgResized/cestovani-2000.webp" media="(max-width: 2500px)">
+						<img src="./img/cestovani.webp" class="w3-image" alt="Mgr. Tomáš Morávek - vážím si času v přírodě">
+					</picture>
+					<div class="w3-container">
+						<span>Vážím si času v přírodě</span>
+					</div>
+				</div>
+			</div>
+			<div class="w3-third">
+				<div class="w3-card">
+					<picture>
+						<source srcset="imgResized/oddavam-480.webp" media="(max-width: 768px)">
+						<source srcset="imgResized/oddavam-768.webp" media="(max-width: 1200px)">
+						<source srcset="imgResized/oddavam-1200.webp" media="(max-width: 1600px)">
+						<source srcset="imgResized/oddavam-2000.webp" media="(max-width: 2500px)">
+						<img src="./img/oddavam.webp" class="w3-image" alt="Mgr. Tomáš Morávek - Rodina je to nejcennější co můžeme mít. Rád oddávám.">
+					</picture>
+					<div class="w3-container">
+						<span>Rodina je to nejcennější co můžeme mít. Rád oddávám.</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="w3-section">
+			<div class="header">
+				<svg class="fa">
+					<use xlink:href="sprites/fa-solid.svg#heart"></use>
+				</svg>
+				PRO Plzeň
+			</div>
+			<div class="text">
+				Jsem dlouholetým členem hnutí Pro Plzeň a vážím si toho, že mohu toto hnutí zastupovat na plzeňské radnici. V minulosti jsem také působil jako člen sportovní komise městského obvodu Plzeň 1 a jako člen výboru pro sport Plzeňského kraje.
+			</div>
+		</div>
+
+		<div class="w3-section">
+			<div class="header">
+				<svg class="fa">
+					<use xlink:href="sprites/fa-solid.svg#bolt"></use>
+				</svg>
+				Aktivní život
+			</div>
+			<div class="text">
+				Považuji se za aktivního člověka, který nevydrží jen tak sedět doma. Zároveň mám blízko k přírodě a zvířatům a snažím se žít v souladu s nimi. Ve volném čase si rád zajdu s kamarády na pivo a popovídám si o běžných každodenních věcech, jindy si prostě lehnu na gauč a pustím si sport v televizi.
+			</div>
+		</div>
+
+		<div class="w3-section">
+			<div class="header">
+				<svg class="fa">
+					<use xlink:href="sprites/fa-solid.svg#people-group"></use>
+				</svg>
+				Politika je o vás
+			</div>
+			<div class="text">
+				Každý rok si přeji – sobě i svému okolí – aby nám nebyl lhostejný osud našeho města a lidí kolem nás. Abychom měli dost energie zlepšovat své okolí a přebírat za něj odpovědnost. Protože právě to je základ fungující společnosti. Mysleme na to, držme si palce a nenechme v sobě vyhasnout slušnost a zdravý selský rozum.
+			</div>
+		</div>
+
+		<div class="w3-row gallery w3-center">
+			<div class="w3-third">
+				<div class="w3-card">
+					<picture>
+						<source srcset="imgResized/plzen-480.webp" media="(max-width: 768px)">
+						<source srcset="imgResized/plzen-768.webp" media="(max-width: 1200px)">
+						<source srcset="imgResized/plzen-1200.webp" media="(max-width: 1600px)">
+						<source srcset="imgResized/plzen-2000.webp" media="(max-width: 2500px)">
+						<img src="./img/plzen.webp" class="w3-image" alt="Mgr. Tomáš Morávek - Plzeň prostě miluji!">
+					</picture>
+					<div class="w3-container">
+						<span>Plzeň prostě miluji!</span>
+					</div>
+				</div>
+			</div>
+			<div class="w3-third">
+				<div class="w3-card">
+					<picture>
+						<source srcset="imgResized/vanoce-480.webp" media="(max-width: 768px)">
+						<source srcset="imgResized/vanoce-768.webp" media="(max-width: 1200px)">
+						<source srcset="imgResized/vanoce-1200.webp" media="(max-width: 1600px)">
+						<source srcset="imgResized/vanoce-2000.webp" media="(max-width: 2500px)">
+						<img src="./img/vanoce.webp" class="w3-image" alt="Mgr. Tomáš Morávek - Vánoce">
+					</picture>
+					<div class="w3-container">
+						<span>Vánoce</span>
+					</div>
+				</div>
+			</div>
+			<div class="w3-third">
+				<div class="w3-card">
+					<picture>
+						<source srcset="imgResized/plavci-480.webp" media="(max-width: 768px)">
+						<source srcset="imgResized/plavci-768.webp" media="(max-width: 1200px)">
+						<source srcset="imgResized/plavci-1200.webp" media="(max-width: 1600px)">
+						<source srcset="imgResized/plavci-2000.webp" media="(max-width: 2500px)">
+						<img src="./img/plavci.webp" class="w3-image" alt="Mgr. Tomáš Morávek - skvělá investice je do budoucnosti dětí">
+					</picture>
+					<div class="w3-container">
+						<span>Skvělá investice je do budoucnosti dětí</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="w3-container w3-light-grey" id="why">
+		<h3 class="w3-center">
+			<svg class="fa">
+				<use xlink:href="sprites/fa-solid.svg#hand-peace"></use>
+			</svg>
+			POVEDLO SE
+		</h3>
+
+		<div class="w3-row w3-padding-48">
+			<div class="w3-quarter gallery w3-center">
+				<img src="img/100mega.webp" class="portrait" alt="Mgr. Tomáš Morávek - sehnal 100 milionů pro sport">
+			</div>
+
+			<div class="w3-large">
+				<p>V uplynulých měsících jsme intenzivně pracovali na přípravě rozpočtu města pro rok 2026. Jsem rád, že se nám podařilo prosadit <strong>historicky nejvyšší podporu sportu</strong>, která poprvé v historii Plzně <strong>překračuje hranici 100 milionů korun</strong>. Je to výsledek dlouhodobého úsilí mnoha lidí, kteří věří, že sport má v našem městě pevné místo.</p>
+				<p>Rozpočet přináší významné posílení podpory sportovců, klubů i mládeže. Jako radní pro oblast sportu se snažím vytvářet podmínky, které umožní sportovnímu prostředí růst a rozvíjet se — od infrastruktury až po práci s dětmi a trenéry.</p>
+
+				<h3>Přehled dotačních titulů pro rok 2026</h3>
+				<p>Schválené dotační programy zahrnují:</p>
+
+				<ul>
+					<li><strong>23 mil. Kč</strong> – podpora činnosti sportovních klubů</li>
+					<li><strong>20 mil. Kč</strong> – investice do sportovní infrastruktury a sportovišť</li>
+					<li><strong>26,5 mil. Kč</strong> – podpora talentované mládeže a sportovních akademií</li>
+					<li><strong>3 mil. Kč</strong> – podpora mládežnických reprezentantů</li>
+					<li><strong>6 mil. Kč</strong> – podpora sportovních akcí pořádaných v Plzni</li>
+				</ul>
+				<p>Celková výše dotačních titulů činí <strong>85 milionů korun</strong>. Další prostředky směřují do sportu i jinými rozpočtovými cestami, takže celková podpora sportu v roce 2026 poprvé přesahuje <strong>100 milionů korun</strong>.</p>
+
+				<h3>Sport jako investice do budoucnosti města</h3>
+
+				<p>Sport vnímáme jako důležitou součást zdravého a aktivního života obyvatel. Podpora sportu není jen o výsledcích, ale především o <strong>dětství, mládeži, komunitě a kvalitním veřejném prostoru</strong>.</p>
+				<p>Velké poděkování patří všem, kteří se na přípravě a schválení rozpočtu podíleli, a hlavně trenérům, dobrovolníkům, funkcionářům i sportovcům. Díky jejich každodenní práci je Plzeň skutečně sportovním městem.</p>
+			</div>
+		</div>
+	</section>
+	<section class="w3-container" id="contact">
+		<h3 class="w3-center">
+			<svg class="fa">
+				<use xlink:href="sprites/fa-solid.svg#address-card"></use>
+			</svg>
+			KONTAKT
+		</h3>
+		<div class="w3-row">
+			<div class="w3-half w3-large w3-right">
+				<div class="w3-padding">
+					<svg class="fa">
+						<use xlink:href="sprites/fa-solid.svg#phone"></use>
+					</svg>
+					<strong>Telefon:</strong> <a href="tel:{{fullPhone}}"> {{phone}}</a>
+				</div>
+				<div class="w3-padding">
+					<svg class="fa">
+						<use xlink:href="sprites/fa-solid.svg#envelope"></use>
+					</svg>
+					<strong>Email:</strong><a href="mailto:{{email}}"> {{email}}</a>
+				</div>
+				<div class="w3-padding">
+					<svg class="fa">
+						<use xlink:href="sprites/fa-solid.svg#map-marker"></use>
+					</svg>
+					<strong>Adresa:</strong>
+					<a href="https://mapy.com/s/damecumuva" target="_blank">
+						<address>{{city}} | {{psc}}</address>
+					</a>
+				</div>
+			</div>
+			<div class="w3-half gallery">
+				<img src="img/ucta-horizontal.webp" alt="Plzeň město kde rád žiji." class="w3-card-2 w3-image w3-hover-opacity photoDominanta w3-right">
+			</div>
+		</div>
+		<div class="w3-row w3-padding-48 w3-center">
+			<div>
+				<a href="https://mapy.com/s/damecumuva" target="_blank">
+					<picture>
+						<source srcset="imgResized/map-480.webp" media="(max-width: 500px)">
+						<source srcset="imgResized/map-768.webp" media="(max-width: 800px)">
+						<source srcset="imgResized/map-1200.webp" media="(max-width: 1200px)">
+						<img src="./img/map.webp" alt="Náhled mapy" class="w3-image">
+					</picture>
+				</a>
+			</div>
+		</div>
+	</section>
+	<footer class="w3-center color-2 w3-padding-64">
+		<a href="#home" class="w3-button w3-white"><span class="fa fa-arrow-up w3-margin-right"></span>Zpět na začátek</a>
+		<div class="w3-section contactIcons">
+			<a href="mailto:{{email}}" rel="nofollow" class="w3-hover-opacity w3-text-white">
+				<svg class="fa">
+					<use xlink:href="sprites/fa-solid.svg#envelope"></use>
+				</svg>
+			</a>
+
+			<a href="tel:{{fullPhone}}" rel="nofollow" class="w3-hover-opacity w3-text-white">
+				<svg class="fa">
+					<use xlink:href="sprites/fa-solid.svg#phone"></use>
+				</svg>
+			</a>
+			<a href="{{facebook}}" target="_blank" rel="nofollow" class="w3-hover-opacity w3-text-white">
+				<svg class="fa">
+					<use xlink:href="sprites/fa-brands.svg#facebook-square"></use>
+				</svg>
+			</a>
+			<a href="{{twitter}}" target="_blank" rel="nofollow" class="w3-hover-opacity w3-text-white">
+				<svg class="fa">
+					<use xlink:href="sprites/fa-brands.svg#x-twitter"></use>
+				</svg>
+			</a>
+			<a href="{{instagram}}" target="_blank" rel="nofollow" class="w3-hover-opacity w3-text-white">
+				<svg class="fa">
+					<use xlink:href="sprites/fa-brands.svg#instagram"></use>
+				</svg>
+			</a>
+			<a href="{{linkedin}}" target="_blank" rel="nofollow" class="w3-hover-opacity w3-text-white">
+				<svg class="fa">
+					<use xlink:href="sprites/fa-brands.svg#linkedin"></use>
+				</svg>
+			</a>
+		</div>
+
+		<div>
+			{{year}} | <a href="{{authorURL}}" rel="nofollow" target="_blank" title="Otevři stránky autora">{{author}}</a> <img src="{{tracker}}{{name}}" class="w3-hide" alt="Visitor Tracking">
+		</div>
+	</footer>
+	<div id="modal" class="w3-modal w3-black">
+		<span class="w3-button w3-xxlarge w3-black w3-display-topright" title="Zavřít okno">
+			<svg class="fa w3-right">
+				<use xlink:href="sprites/fa-solid.svg#close"></use>
+			</svg>
+
+		</span>
+		<div class="w3-modal-content w3-animate-zoom w3-center w3-transparent">
+			<img id="modalImage" class="w3-image" alt="popisek" src="./img/deti.webp">
+			<p id="caption" class="w3-opacity w3-large"></p>
+		</div>
+	</div>
+</body>
+
+</html>

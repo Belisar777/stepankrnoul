@@ -1,0 +1,277 @@
+:root {
+	--primary-color: #28426d;
+	--secondary-color: #ffffff;
+	--text-color: #302c2c;
+	--text-hover-color: #f62423;
+}
+
+body,
+html {
+	color: var(--text-color);
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-family: "Poppins", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-weight: bold;
+}
+
+.w3-section .header,
+.w3-section .text {
+	padding: 0 0 1.25em 0;
+}
+
+.bigTitle h1 {
+	font-size: 4.85vw;
+	color: var(--text-hover-color);
+	font-weight: 800;
+	line-height: 1.1;
+}
+
+.bigTitle h2 {
+	font-size: 3.3vw;
+	color: var(--primary-color);
+	font-weight: 700;
+	line-height: 1.2;
+}
+
+.bigTitle h3 {
+	font-size: 2.1vw;
+	color: var(--primary-color);
+	font-weight: 700;
+	line-height: 1.2;
+}
+
+.contactIcons {
+	display: flex;
+	justify-content: center;
+	gap: 1ex;
+	width: 100%;
+}
+
+header .contactIcons {
+	justify-content: flex-start;
+	position: absolute;
+	bottom: 1em;
+}
+
+.contactIcons .fa {
+	width: 2.7vw;
+	height: 2.7vw;
+
+	min-width: 35px;
+	min-height: 35px
+}
+
+header .contactIcons .fa {
+	color: var(--text-hover-color);
+}
+
+header .contactIcons .fa:hover {
+	color: var(--primary-color);
+}
+
+#why .fa,
+h3,
+h4,
+h5 {
+	color: var(--primary-color);
+}
+
+
+.color-1,
+#myNavbar .w3-white,
+#myNavbar .w3-hover-white:hover {
+	color: var(--primary-color) !important;
+	background-color: var(--secondary-color) !important
+}
+
+.color-2 {
+	color: var(--secondary-color) !important;
+	background-color: var(--primary-color) !important;
+}
+
+footer .fa,
+header .fa {
+	padding-right: 0.4ex;
+}
+
+body,
+html {
+	height: 100%;
+	line-height: 1.8;
+	font-size: 17px;
+}
+
+section.w3-container {
+	padding: 60px 30px;
+}
+
+
+section.w3-container .header {
+	font-weight: bold;
+	font-size: 120%;
+	color: var(--primary-color);
+}
+
+
+section.w3-container .text {
+	text-indent: 4ex;
+}
+
+address {
+	font-style: normal;
+	display: inline;
+}
+
+a,
+a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+	color: var(--text-hover-color);
+}
+
+.w3-button {
+	font-weight: bold;
+	color: var(--primary-color);
+}
+
+.w3-button:hover {
+	color: var(--text-hover-color) !important;
+	background-color: var(--secondary-color) !important
+}
+
+/* Full height image header */
+#home {
+	background-position: top;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-image: url("./img/header.webp");
+	min-height: 100%;
+}
+
+.w3-bar .w3-button {
+	padding: 14px 8px 10px 4px;
+	font-size: 20px;
+}
+
+.gallery img {
+	cursor: pointer;
+}
+
+#mySidebar {
+	display: none;
+	font-weight: bold;
+}
+
+header>div {
+	padding: 0 2vw;
+}
+
+.bigTitle {
+	width: 42%;
+	top: 57%;
+}
+
+.portrait {
+	max-width: 75%;
+}
+
+.w3-modal {
+	padding: 30px;
+}
+
+.video-container {
+	position: relative;
+	padding-bottom: 56.25%;
+}
+
+.video-container iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.w3-bar .w3-button.menuOpener {
+	font-size: 24px;
+	padding-top: 7px;
+	padding-bottom: 6px;
+
+}
+
+@media (min-width:600px) {
+	.photoDominanta {
+		width: 25rem;
+	}
+
+	.logo {
+		width: 100%;
+	}
+
+	.gallery .w3-third:not(:last-child) div {
+		margin: 8px 6px 0 6px;
+	}
+
+	.gallery .w3-third:first-child div {
+		margin: 8px 12px 0 0px;
+	}
+
+	.gallery .w3-third:last-child div {
+		margin: 8px 0px 0 12px;
+	}
+}
+
+@media (max-width:900px) {
+	.gallery span {
+		font-size: 14px;
+	}
+
+	header .contactIcons {
+		justify-content: center;
+	}
+}
+
+@media (max-width:600px) {
+
+	#myNavbar .logoWrapp {
+		width: 80%;
+	}
+
+	.gallery .w3-third {
+		margin-top: 16px;
+	}
+
+	p,
+	.text {
+		text-align: justify;
+	}
+
+	.header,
+	h3,
+	h4 {
+		text-align: center;
+	}
+}
+
+#myOverlay {
+	display: none;
+}
+
+#mySidebar {
+	z-index: 3;
+}
