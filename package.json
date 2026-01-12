@@ -39,8 +39,10 @@
 		"linkedin": "https://www.linkedin.com/in/%C5%A1t%C4%9Bp%C3%A1n-kr%C5%88oul-b027412b4/",
 		"instagram": "https://www.instagram.com/s.krnoul/",
 		"altPortret": "Mgr. Štěpán Krňoul - Zastupitel města Plzně. Předseda kontrolního výboru ZMO Plzeň 1. Hrdý Plzeňák.",
+		"office": "Kancelář 306",
+		"street": "alej Svobody 60",
 		"city": "Plzeň",
-		"psc": "301 00"
+		"psc": "323 00"
 	},
 	"devDependencies": {
 		"fast-glob": "^3.3.3",
