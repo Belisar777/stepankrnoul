@@ -41,14 +41,14 @@ h5 {
 
 .bigTitle h2 {
 	font-size: 3.3vw;
-	color: var(--primary-color);
+	color: var(--secondary-color);
 	font-weight: 700;
 	line-height: 1.2;
 }
 
 .bigTitle h3 {
 	font-size: 2.1vw;
-	color: var(--primary-color);
+	color: var(--secondary-color);
 	font-weight: 700;
 	line-height: 1.2;
 }
@@ -69,7 +69,6 @@ header .contactIcons {
 .contactIcons .fa {
 	width: 2.7vw;
 	height: 2.7vw;
-
 	min-width: 35px;
 	min-height: 35px
 }
@@ -79,7 +78,7 @@ header .contactIcons .fa {
 }
 
 header .contactIcons .fa:hover {
-	color: var(--primary-color);
+	color: var(--secondary-color);
 }
 
 #why .fa,
