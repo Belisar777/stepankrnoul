@@ -132,7 +132,7 @@ section.w3-container .text {
 
 address {
 	font-style: normal;
-	display: inline;
+	margin-left: 10ex;
 }
 
 a,
