@@ -2,7 +2,7 @@
 	"name": "stepankrnoul.cz",
 	"version": "1.0.3",
 	"author": "QuickSoft CZ",
-	"description": "Oficiální stránky zastupitele města Plzně Štěpána Krňoula",
+	"description": "Oficiální stránky hrdého Plzeňana a zastupitele města Plzně Štěpána Krňoula",
 	"main": "dev/index.html",
 	"license": "ISC",
 	"scripts": {
@@ -31,7 +31,7 @@
 		"fullName": "Mgr. Štěpán Krňoul",
 		"title": "Mgr. Štěpán Krňoul - zastupitel města Plzně",
 		"h1": "Hrdý Plzeňák",
-		"keywords": "Mgr. Štěpán Krňoul, učitel, zastupitel města Plzně,Předseda kontrolního výboru ZMO Plzeň 1, Hrdý Plzeňák.",
+		"keywords": "Mgr. Štěpán Krňoul, učitel, zastupitel města Plzně, Předseda kontrolního výboru ZMO Plzeň 1, Hrdý Plzeňák.",
 		"year": "2026",
 		"tracker": "https://tracker.stanislav.eu/track.php?site=",
 		"twitter": "https://x.com/SKrnoul",
