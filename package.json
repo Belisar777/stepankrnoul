@@ -1,6 +1,6 @@
 {
 	"name": "stepankrnoul.cz",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"author": "QuickSoft CZ",
 	"description": "Oficiální stránky hrdého Plzeňana a zastupitele města Plzně Štěpána Krňoula",
 	"main": "dev/index.html",
@@ -27,7 +27,7 @@
 		"authorURL": "https://quicksoft.cz",
 		"phone": "602 369 621",
 		"fullPhone": "+420602369621",
-		"email": "krnoul@plzen.eu",
+		"email": "krnouls@plzen.eu",
 		"fullName": "Mgr. Štěpán Krňoul",
 		"title": "Mgr. Štěpán Krňoul - zastupitel města Plzně",
 		"h1": "Hrdý Plzeňák",

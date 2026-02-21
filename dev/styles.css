@@ -41,7 +41,8 @@ h5 {
 
 .bigTitle h2 {
 	font-size: 3.3vw;
-	color: var(--secondary-color);
+	/* color: var(--secondary-color); */
+	color: var(--text-hover-color);
 	font-weight: 700;
 	line-height: 1.2;
 }
