@@ -1,6 +1,7 @@
 :root {
-	--primary-color: #28426d;
+	--primary-color: #fffa4b;
 	--secondary-color: #ffffff;
+	--primary-font-color: #000000;
 	--text-color: #302c2c;
 	--text-hover-color: #f62423;
 }
@@ -32,24 +33,27 @@ h5 {
 	padding: 0 0 1.25em 0;
 }
 
+.bigTitle h1,
+.bigTitle h2,
+.bigTitle h3 {
+	color: var(--primary-font-color);
+}
+
+
 .bigTitle h1 {
 	font-size: 4.85vw;
-	color: var(--text-hover-color);
 	font-weight: 800;
 	line-height: 1.1;
 }
 
 .bigTitle h2 {
 	font-size: 3.3vw;
-	/* color: var(--secondary-color); */
-	color: var(--text-hover-color);
 	font-weight: 700;
 	line-height: 1.2;
 }
 
 .bigTitle h3 {
 	font-size: 2.1vw;
-	color: var(--secondary-color);
 	font-weight: 700;
 	line-height: 1.2;
 }
@@ -74,31 +78,17 @@ header .contactIcons {
 	min-height: 35px
 }
 
-header .contactIcons .fa {
-	color: var(--text-hover-color);
-}
-
 header .contactIcons .fa:hover {
 	color: var(--secondary-color);
 }
 
-#why .fa,
-h3,
-h4,
-h5 {
-	color: var(--primary-color);
-}
-
-
-.color-1,
-#myNavbar .w3-white,
-#myNavbar .w3-hover-white:hover {
+.color-1 {
 	color: var(--primary-color) !important;
 	background-color: var(--secondary-color) !important
 }
 
 .color-2 {
-	color: var(--secondary-color) !important;
+	color: var(--primary-font-color) !important;
 	background-color: var(--primary-color) !important;
 }
 
@@ -114,17 +104,32 @@ html {
 	font-size: 17px;
 }
 
-section.w3-container {
-	padding: 60px 30px;
+#myNavbar {
+	padding: 0.5em 5vw;
+	border-bottom: 5px solid var(--primary-font-color);
 }
 
+#home {
+	margin-top: 77px;
+}
+
+.w3-bar-item {
+	margin-top: 6px;
+}
+
+.w3-bar-item.logoWrapp {
+	padding-left: 0px;
+	margin-top: 0px;
+}
+
+section.w3-container {
+	padding: 2em 5vw;
+}
 
 section.w3-container .header {
 	font-weight: bold;
 	font-size: 120%;
-	color: var(--primary-color);
 }
-
 
 section.w3-container .text {
 	text-indent: 4ex;
@@ -144,14 +149,23 @@ a:hover {
 	color: var(--text-hover-color);
 }
 
+.map {
+	width: 100%;
+}
+
+.w3-bar-item {
+	font-weight: bold;
+}
+
 .w3-button {
 	font-weight: bold;
-	color: var(--primary-color);
+	color: var(--secondary-color) !important;
+	background-color: var(--primary-font-color) !important;
 }
 
 .w3-button:hover {
-	color: var(--text-hover-color) !important;
-	background-color: var(--secondary-color) !important
+	color: var(--primary-font-color) !important;
+	background-color: var(--secondary-color) !important;
 }
 
 /* Full height image header */
@@ -211,7 +225,6 @@ header>div {
 	font-size: 24px;
 	padding-top: 7px;
 	padding-bottom: 6px;
-
 }
 
 @media (min-width:600px) {

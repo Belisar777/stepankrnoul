@@ -67,18 +67,18 @@
 <body>
 	<div class="w3-overlay w3-hide-large w3-animate-opacity menuCloser" title="Zavři menu" id="myOverlay"></div>
 	<div class="w3-top">
-		<div class="w3-bar w3-white" id="myNavbar">
+		<div class="w3-bar color-2" id="myNavbar">
 			<a href="#home" class="w3-bar-item logoWrapp">
 				<img class="logo" alt="logo" src="img/logoObdelnik.webp">
 			</a>
 			<div class="w3-center w3-hide-small w3-hide-medium">
-				<a href="mailto:{{email}}" class="w3-bar-item w3-large w3-button">
+				<a href="mailto:{{email}}" class="w3-bar-item w3-large">
 					<svg class="fa">
 						<use xlink:href="sprites/fa-solid.svg#envelope"></use>
 					</svg>
 					{{email}}
 				</a>
-				<a href="tel:{{fullPhone}}" class="w3-bar-item w3-large w3-button">
+				<a href="tel:{{fullPhone}}" class="w3-bar-item w3-large">
 					<svg class="fa">
 						<use xlink:href="sprites/fa-solid.svg#phone"></use>
 					</svg>
@@ -86,19 +86,19 @@
 				</a>
 			</div>
 			<div class="w3-right w3-hide-small w3-hide-medium">
-				<a href="#about" class="w3-bar-item w3-large w3-button">
+				<a href="#about" class="w3-bar-item w3-large">
 					<svg class="fa">
 						<use xlink:href="sprites/fa-solid.svg#user"></use>
 					</svg>
 					O MNĚ
 				</a>
-				<a href="#why" class="w3-bar-item w3-large w3-button">
+				<a href="#why" class="w3-bar-item w3-large">
 					<svg class="fa">
 						<use xlink:href="sprites/fa-solid.svg#hand-peace"></use>
 					</svg>
 					VIZE
 				</a>
-				<a href="#contact" class="w3-bar-item w3-large w3-button">
+				<a href="#contact" class="w3-bar-item w3-large">
 					<svg class="fa">
 						<use xlink:href="sprites/fa-solid.svg#address-card"></use>
 					</svg>
@@ -127,7 +127,7 @@
 			<h1>{{h1}}</h1>
 			<h2>{{fullName}}</h2>
 		</div>
-		<a href="#contact" class="w3-button w3-white w3-padding-large w3-margin-right w3-hide-small w3-display-right w3-hide-medium">Zeptejte se</a>
+		<a href="#contact" class="w3-button w3-padding-large w3-margin-right w3-hide-small w3-display-right w3-hide-medium">Zeptejte se</a>
 		<div class="contactIcons">
 			<a href="mailto:{{email}}" rel="nofollow">
 				<svg class="fa">
@@ -393,7 +393,6 @@
 				</div>
 			</div>
 			<div class="w3-half gallery">
-
 				<picture>
 					<source srcset="imgResized/20letSpolu-480.webp" media="(max-width: 768px)">
 					<source srcset="imgResized/20letSpolu-768.webp" media="(max-width: 1200px)">
@@ -403,49 +402,45 @@
 				</picture>
 			</div>
 		</div>
-		<div class="w3-row w3-padding-48 w3-center">
-			<div>
-				<a href="{{mapUrl}}" target="_blank">
-					<picture>
-						<source srcset="imgResized/map-480.webp" media="(max-width: 500px)">
-						<source srcset="imgResized/map-768.webp" media="(max-width: 800px)">
-						<source srcset="imgResized/map-1200.webp" media="(max-width: 1200px)">
-						<img src="./img/map.webp" alt="Náhled mapy" class="w3-image">
-					</picture>
-				</a>
-			</div>
-		</div>
 	</section>
+	<a href="{{mapUrl}}" target="_blank">
+		<picture>
+			<source srcset="imgResized/map-480.webp" media="(max-width: 500px)">
+			<source srcset="imgResized/map-768.webp" media="(max-width: 800px)">
+			<source srcset="imgResized/map-1200.webp" media="(max-width: 1250px)">
+			<img src="./img/map.webp" alt="Náhled mapy" class="w3-image map">
+		</picture>
+	</a>
 	<footer class="w3-center color-2 w3-padding-64">
-		<a href="#home" class="w3-button w3-white"><span class="fa fa-arrow-up w3-margin-right"></span>Zpět na začátek</a>
+		<a href="#home" class="w3-button"><span class="fa fa-arrow-up w3-margin-right"></span>Zpět na začátek</a>
 		<div class="w3-section contactIcons">
-			<a href="mailto:{{email}}" rel="nofollow" class="w3-hover-opacity w3-text-white">
+			<a href="mailto:{{email}}" rel="nofollow" class="w3-hover-opacity">
 				<svg class="fa">
 					<use xlink:href="sprites/fa-solid.svg#envelope"></use>
 				</svg>
 			</a>
 
-			<a href="tel:{{fullPhone}}" rel="nofollow" class="w3-hover-opacity w3-text-white">
+			<a href="tel:{{fullPhone}}" rel="nofollow" class="w3-hover-opacity">
 				<svg class="fa">
 					<use xlink:href="sprites/fa-solid.svg#phone"></use>
 				</svg>
 			</a>
-			<a href="{{facebook}}" target="_blank" rel="nofollow" class="w3-hover-opacity w3-text-white">
+			<a href="{{facebook}}" target="_blank" rel="nofollow" class="w3-hover-opacity">
 				<svg class="fa">
 					<use xlink:href="sprites/fa-brands.svg#facebook-square"></use>
 				</svg>
 			</a>
-			<a href="{{twitter}}" target="_blank" rel="nofollow" class="w3-hover-opacity w3-text-white">
+			<a href="{{twitter}}" target="_blank" rel="nofollow" class="w3-hover-opacity">
 				<svg class="fa">
 					<use xlink:href="sprites/fa-brands.svg#x-twitter"></use>
 				</svg>
 			</a>
-			<a href="{{instagram}}" target="_blank" rel="nofollow" class="w3-hover-opacity w3-text-white">
+			<a href="{{instagram}}" target="_blank" rel="nofollow" class="w3-hover-opacity">
 				<svg class="fa">
 					<use xlink:href="sprites/fa-brands.svg#instagram"></use>
 				</svg>
 			</a>
-			<a href="{{linkedin}}" target="_blank" rel="nofollow" class="w3-hover-opacity w3-text-white">
+			<a href="{{linkedin}}" target="_blank" rel="nofollow" class="w3-hover-opacity">
 				<svg class="fa">
 					<use xlink:href="sprites/fa-brands.svg#linkedin"></use>
 				</svg>
