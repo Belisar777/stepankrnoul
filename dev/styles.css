@@ -6,9 +6,9 @@
 	--text-hover-color: #f62423;
 }
 
-body,
 html {
 	color: var(--text-color);
+	scroll-behavior: smooth;
 }
 
 body,
@@ -113,6 +113,11 @@ html {
 	margin-top: 77px;
 }
 
+.lightYellow {
+	background-color: #FFFFE0;
+	;
+}
+
 .w3-bar-item {
 	margin-top: 6px;
 }
@@ -124,6 +129,7 @@ html {
 
 section.w3-container {
 	padding: 2em 5vw;
+	scroll-margin-top: 70px;
 }
 
 section.w3-container .header {
@@ -221,10 +227,18 @@ header>div {
 	height: 100%;
 }
 
-.w3-bar .w3-button.menuOpener {
-	font-size: 24px;
-	padding-top: 7px;
-	padding-bottom: 6px;
+.w3-bar .menuOpener {
+	font-size: 25px;
+	padding: 0px;
+}
+
+#mySidebar .closer {
+	padding-bottom: 4em;
+}
+
+#mySidebar .fa {
+	font-size: 25px;
+	padding: 0px;
 }
 
 @media (min-width:600px) {
