@@ -115,11 +115,17 @@ async function cleanUnusedFonts(distDir) {
 	console.log('\x1b[32m✓ \x1b[0m Nepotřebné soubory fontů byly odstraněny');
 }
 
-cleanUpFiles(distDir);
-console.log('\x1b[32m✓  \x1b[0mNepotřebné soubory js a css byly odstraněny');
-cleanUnusedFonts(distDir);
-cleanUnusedSprites(distDir).catch(err => {
-	console.error('\x1b[31m✗\x1b[0m Chyba při zpracování sprite souborů:', err);
-	process.exit(1);
-});
+async function main() {
+	cleanUpFiles(distDir);
+	console.log('\x1b[32m✓  \x1b[0mNepotřebné soubory js a css byly odstraněny');
+	await cleanUnusedFonts(distDir);
+	try {
+		await cleanUnusedSprites(distDir);
+	} catch (err) {
+		console.error('\x1b[31m✗\x1b[0m Chyba při zpracování sprite souborů:', err);
+		process.exit(1);
+	}
+}
+
+main();
 
