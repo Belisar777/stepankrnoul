@@ -193,10 +193,29 @@ a:hover {
 	cursor: pointer;
 }
 
+
 #mySidebar {
 	display: none;
 	font-weight: bold;
+	top: 0px;
+	right: 0px;
+	z-index: 3;
+	width: 40vw;
+	padding-right: 5vw;
 }
+
+#mySidebar .w3-bar-item {
+	padding: 0px 0px 5px 0px;
+}
+
+#mySidebar .w3-bar-item.closer {
+	padding: 15px 0px;
+}
+
+#myOverlay {
+	display: none;
+}
+
 
 header>div {
 	padding: 0 2vw;
@@ -294,12 +313,4 @@ header>div {
 	h4 {
 		text-align: center;
 	}
-}
-
-#myOverlay {
-	display: none;
-}
-
-#mySidebar {
-	z-index: 3;
 }
